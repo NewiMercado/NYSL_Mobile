@@ -1,0 +1,21 @@
+{
+  "rules": {
+    ".read": true,
+    "game-posts":{
+      ".read": true,
+      ".write": true
+    },
+    "posts":{
+      ".read": true,
+      ".write": true
+    },
+    "user-posts":{
+      ".read": true,
+      ".write": true
+    },
+    "users":{
+      ".read": true,
+      ".write": true
+    }
+  }
+ }

@@ -1,0 +1,344 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>NYSL website</title>
+    <script>
+        navigator.standalone = navigator.standalone || (screen.height - document.documentElement.clientHeight < 40)
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" sizes="196x196" href="img/nysl_logo.png">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Material Design Lite -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css">
+    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <h3 class="h3 col-12">North Youth Soccer League</h3>
+            <small class="col-8 text-muted">Mobile Website</small>
+        </div>
+
+        <div class="row" id="navmenu">
+            <div class="nav nav-tabs col-12 col-lg-12" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                    aria-controls="nav-home" aria-selected="true">Home</a>
+                <a class="nav-item nav-link" id="nav-chat-tab" data-toggle="tab" href="#nav-chat" role="tab"
+                    aria-controls="nav-chat" aria-selected="false">Chat</a>
+                <a class="nav-item nav-link" id="nav-maps-tab" data-toggle="tab" href="#nav-maps" role="tab"
+                    aria-controls="nav-maps" aria-selected="false">Maps</a>
+                <a class="nav-item nav-link" id="nav-schedule-tab" data-toggle="tab" href="#nav-schedule" role="tab"
+                    aria-controls="nav-schedule" aria-selected="false">Schedule</a>
+            </div>
+            </nav>
+        </div>
+
+        <div class="row">
+            <div class="tab-content col" id="nav-tabContent">
+                <div class="tab-pane fade show" id="nav-schedule" role="tabpanel" aria-labelledby="nav-schedule-tab">
+                    <div class="table-responsive">
+                        <table class="table table-light">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Teams</th>
+                                    <th>Location</th>
+                                    <th>Hour</th>
+                                    <th>Chats</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>9-1</td>
+                                    <td>U1 vs U4</td>
+                                    <td>AZ Katzenmeier</td>
+                                    <td>9:30 am.</td>
+                                    <td>
+                                        <a class="nav-item nav-link chat-btn" data-gameid="1" href="#">Chat</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>''</td>
+                                    <td>U3 vs U2</td>
+                                    <td>Greenbay</td>
+                                    <td>1:00 pm.</td>
+                                    <td>
+                                        <a class="nav-item nav-link chat-btn" data-gameid="2" href="#">Chat</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9-8</td>
+                                    <td>U5 vs U6</td>
+                                    <td>Howard A. Yaeger</td>
+                                    <td>9:30 am.</td>
+                                    <td>
+                                        <a class="nav-item nav-link chat-btn" data-gameid="3" href="#">Chat</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>''</td>
+                                    <td>U6 vs U1</td>
+                                    <td>Marjorie P. Hart</td>
+                                    <td>1:00 pm.</td>
+                                    <td>
+                                        <a class="nav-item nav-link chat-btn" data-gameid="4" href="#">Chat</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                <div class="tab-pane fade show" id="nav-chat" role="tabpanel" aria-labelledby="nav-chat-tab">
+                    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+
+                        <!-- Splash screen -->
+                        <section id="page-splash">
+                            <h3 class="logo">Database Web Quickstart</h3>
+                            <div>
+                                <button id="sign-in-button"
+                                    class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i
+                                        class="material-icons">account_circle</i> Sign in with Google</button>
+                            </div>
+                        </section>
+
+                        <!-- Header section containing logo and menu -->
+                        <header class="header mdl-layout__header mdl-color-text--white">
+
+                            <div class="mdl-layout__header-row titlebar">
+                                <button id="sign-out-button"
+                                    class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i
+                                        class="material-icons">account_circle</i> Sign out</button>
+                            </div>
+
+                            <!-- Navigation Bar -->
+                            <div class="tab mdl-layout__header-row">
+                                <div class="mdl-tab col-10">
+                                    <div id="menu-recent" class="mdl-layout__tab is-active mdl-button mdl-js-button mdl-js-ripple-effect">
+                                      <i class="material-icons">new_releases</i> Recent
+                                    </div>
+                                    <div id="menu-my-posts" class="mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
+                                      <i class="material-icons">home</i> My posts
+                                    </div>
+                                    <div id="menu-my-top-posts" class="mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
+                                      <i class="material-icons">trending_up</i> My top posts
+                                    </div>
+                                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-color--amber-400 mdl-shadow--4dp mdl-js-ripple-effect" id="add">
+                                      <i class="material-icons">mode_edit</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </header>
+
+                        <main class="mdl-layout__content mdl-color--grey-100">
+
+                            <!-- Show the add post form -->
+                            <section class="mdl-grid content" id="add-post" style="display:none">
+                                <div class="mdl-cell mdl-cell--12-col mdl-grid">
+
+                                    <!-- Card containing the inputs to add a new messages -->
+                                    <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet
+                                          mdl-cell--6-col-desktop">
+                                        <div class="mdl-card__title mdl-color-text--white">
+                                            <h2 class="mdl-card__title-text">New Post</h2>
+                                        </div>
+                                        <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+                                            <form id="message-form" action="#">
+                                                <div
+                                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                                    <input class="mdl-textfield__input" type="text" id="new-post-title">
+                                                    <label class="mdl-textfield__label" for="new-post-title">Post
+                                                        title...</label>
+                                                </div>
+                                                <div
+                                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                                    <textarea class="mdl-textfield__input" rows="3"
+                                                        id="new-post-message"></textarea>
+                                                    <label class="mdl-textfield__label" for="new-post-message">Post
+                                                        message...</label>
+                                                </div>
+                                                <button type="submit"
+                                                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                                                    Add post
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Show a list of recent posts -->
+                            <section class="mdl-grid content" id="recent-posts-list" style="display:none">
+                                <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                                </div>
+                            </section>
+
+                            <!-- Show the list of user's posts -->
+                            <section class="mdl-grid content" id="user-posts-list" style="display:none">
+                                <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                                </div>
+                            </section>
+
+                            <!-- Show the list of top user's posts -->
+                            <section class="mdl-grid content" id="top-user-posts-list" style="display:none">
+                                <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                                </div>
+                            </section>
+                        </main>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="table-responsive">
+                        <table class="table table-light col-12">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Pos.</th>
+                                    <th>Team</th>
+                                    <th>Pts.</th>
+                                    <th>GD</th>
+                                    <th>GP</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1°</td>
+                                    <td>Team 2</td>
+                                    <td>9</td>
+                                    <td>+4</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>2°</td>
+                                    <td>Team 4</td>
+                                    <td>7</td>
+                                    <td>+2</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>3°</td>
+                                    <td>Team 6</td>
+                                    <td>6</td>
+                                    <td>+2</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>4°</td>
+                                    <td>Team 5</td>
+                                    <td>3</td>
+                                    <td>+1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>5°</td>
+                                    <td>Team 1</td>
+                                    <td>1</td>
+                                    <td>-1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>6°</td>
+                                    <td>Team 3</td>
+                                    <td>0</td>
+                                    <td>-3</td>
+                                    <td>3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade show" id="nav-maps" role="tabpanel" aria-labelledby="nav-maps-tab">
+                    <div class="row">
+                        <h3 class="h3 justify-content-center" id="location">Game Locations:</h3>
+                    </div>
+                    <div class="row">
+                        <h5 class="h5 col-6 col-lg-3">AJ Katzenmaier Elementary:</h5>
+                        <iframe class="col-lg-3"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.619120549878!2d-87.86320467274793!3d42.32620259993667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f932fbc6ba7cd%3A0xcf2bbe275c6da815!2sA+J+Katzenmaier+Elementary+School!5e0!3m2!1ses!2sar!4v1552314926489"
+                            width="280" height="180" style="border:0" allowfullscreen></iframe>
+                        <h5 class="h5 col-lg-3">Greenbay Elementary:</h5>
+                        <iframe class="col-lg-3"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.011012009336!2d-87.87105288458393!3d42.32096387918946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f933bce5af881%3A0x740a7a7d548adce1!2sGreenbay+Elementary+School+(K-5)!5e0!3m2!1ses!2sar!4v1552315133484"
+                            width="280" height="180" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <div class="row">
+                        <h5 class="h5 col-lg-3" id="team5">Howard A Yeager Elementary:</h5>
+                        <iframe class="col-lg-3"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585850578758!2d-87.66511018459671!3d41.9232609792186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f852467%3A0xb6cb22b2f0358874!2sHoward+A+Yeager+Elementary!5e0!3m2!1ses!2sar!4v1552316509037"
+                            width="280" height="180" style="border:0" allowfullscreen></iframe>
+                        <h5 class="h5 col-lg-3">Marjorie P Hart Elementary:</h5>
+                        <iframe class="col-lg-3"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.2898393489686!2d-87.64816138459652!3d41.92962287921823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2637f9d7%3A0xdbff5d5dfcfcfa35!2sMarjorie+P+Hart+Elementary!5e0!3m2!1ses!2sar!4v1552316582406"
+                            width="280" height="180" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <div class="row">
+                        <h5 class="h5 col-lg-3">North Elementary:</h5>
+                        <iframe class="col-lg-3"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3355487036247!2d-87.64831158459724!3d41.907144879219885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af14860a5%3A0x5736e62f19086c62!2sNorth+Elementary!5e0!3m2!1ses!2sar!4v1552315949904"
+                            width="280" height="180" style="border:0" allowfullscreen></iframe>
+                        <h5 class="h5 col-lg-3">South Elementary:</h5>
+                        <iframe class="col-lg-3"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2954.3869435096217!2d-88.34395368458694!3d42.227545679195885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f6d4a6d2e1093%3A0xdea3c745e6bb6aa0!2sSouth+Elementary+School!5e0!3m2!1ses!2sar!4v1552315999434"
+                            width="280" height="180" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" id="buttons">
+            <div class="col-8 col-sm-7 col-md-5 col-lg-3">
+                <a href="sms:" class="btn btn-primary">SMS</a>
+
+                <a href="mailto:nysl@chisoccer.org" class="btn btn-primary">Email</a>
+
+                <button type="button" class="btn btn-primary">Chat</button>
+
+                <a href="call:" class="btn btn-primary">Call</a>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDXtL4-AaNhljzidcjehoNWiVbNjRWrbow",
+            authDomain: "nysl-mobile-7fcbe.firebaseapp.com",
+            databaseURL: "https://nysl-mobile-7fcbe.firebaseio.com",
+            projectId: "nysl-mobile-7fcbe",
+            storageBucket: "nysl-mobile-7fcbe.appspot.com",
+            messagingSenderId: "1024750159314"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
